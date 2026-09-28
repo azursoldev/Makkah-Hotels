@@ -1,0 +1,13 @@
+{
+  "name": "sukoon-sacred-stays",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sukoon — Considered Hotels Near the Holy Mosques in Makkah & Madinah",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": ["hotels", "makkah", "madinah", "umrah", "hajj"],
+  "author": "Sukoon Sacred Stays",
+  "license": "MIT"
+}

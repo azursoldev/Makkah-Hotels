@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukoon — Sacred Stays Near the Holy Mosques</title>
+  
+  <meta name="author" content="Sukoon Sacred Stays">
+  <meta name="description" content="A curated collection of tranquil residences moments from Masjid al-Haram and Al-Masjid an-Nabawi. Designed for stillness, contemplation, and spiritual presence.">
+  <meta property="og:title" content="Sukoon — Sacred Stays Near the Holy Mosques">
+  <meta property="og:description" content="Considered hotels close to the Holy Mosques, for a journey with less distance and more peace.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/makkah-hero.jpg">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Base Stylesheet -->
+  <link rel="stylesheet" href="./assets/styles.css">
+  
+  <style>
+    /* ============================================================
+       SUKOON — QUIET LUXURY / AMAN-STYLE EDITORIAL DESIGN SYSTEM
+       ============================================================ */
+    :root {
+      --bg-cream: #faf9f5;
+      --bg-surface: #ffffff;
+      --emerald-dark: #0f1c16;
+      --emerald-deep: #16261f;
+      --emerald-accent: #1e382b;
+      --gold-champagne: #c9a86a;
+      --gold-muted: #d9bf8f;
+      --text-main: #192620;
+      --text-muted: #5e6d65;
+      --text-subtle: #8a968f;
+      --border-light: rgba(22, 38, 31, 0.08);
+      --border-gold: rgba(201, 168, 106, 0.3);
+      --font-display: "DM Serif Display", serif;
+      --font-sans: "Manrope", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg-cream);
+      color: var(--text-main);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Subtle top luxury bar */
+    .top-curation-bar {
+      background: var(--emerald-dark);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .top-curation-bar span strong {
+      color: var(--gold-champagne);
+      font-weight: 500;
+    }
+    .curation-meta-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+    .curation-meta-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .curation-meta-links a:hover {
+      color: var(--gold-champagne);
+    }
+
+    /* Mobile Drawer Styles */
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(320px, 85vw);
+      height: 100vh;
+      background: var(--emerald-dark);
+      color: #f7f5f0;
+      z-index: 9999;
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.45);
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-nav-drawer.open {
+      right: 0;
+    }
+    .mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 28, 22, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .mobile-nav-link {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-family: var(--font-sans);
+      transition: color 0.2s;
+      padding: 0.25rem 0;
+    }
+    .mobile-nav-link:hover {
+      color: var(--gold-champagne);
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 768px) {
+      .top-curation-bar {
+        padding: 0.45rem 1rem;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+      }
+      .top-curation-bar .curation-meta-links {
+        display: none !important;
+      }
+      .hero-copy h1 {
+        font-size: 2.25rem !important;
+        line-height: 1.15 !important;
+      }
+      .residence-drawer {
+        width: 100vw !important;
+        padding: 2.25rem 1.25rem 3rem !important;
+      }
+      .story-grid {
+        gap: 2.5rem !important;
+      }
+      .editorial-story-section {
+        padding: 4rem 0 !important;
+      }
+      .vip-concierge-pill {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        padding: 0.65rem 1.15rem;
+        font-size: 0.78rem;
+      }
+    }
+
+    /* Minimalist floating category filter */
+    .editorial-filter-bar {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.75rem;
+      margin-bottom: 2.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .editorial-filter-link {
+      background: none;
+      border: none;
+      padding: 0.5rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+      color: var(--text-subtle);
+      cursor: pointer;
+      position: relative;
+      transition: color 0.25s ease;
+      white-space: nowrap;
+    }
+    .editorial-filter-link:hover {
+      color: var(--text-main);
+    }
+    .editorial-filter-link.active {
+      color: var(--emerald-accent);
+      font-weight: 600;
+    }
+    .editorial-filter-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold-champagne);
+    }
+
+    /* Editorial Storytelling Section (Quiet Luxury Split) */
+    .editorial-story-section {
+      padding: 6rem 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .story-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 5rem;
+      }
+    }
+    .story-image-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      box-shadow: 0 20px 40px -15px rgba(15, 28, 22, 0.15);
+    }
+    .story-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .story-image-wrap:hover img {
+      transform: scale(1.03);
+    }
+    .story-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .story-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold-champagne);
+      font-weight: 600;
+      margin: 0;
+    }
+    .story-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      line-height: 1.2;
+      color: var(--emerald-dark);
+      margin: 0;
+      font-weight: 400;
+    }
+    .story-text {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.85;
+      margin: 0;
+    }
+    .story-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+    @media (min-width: 600px) {
+      .story-pillars {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .story-pillar-item h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--emerald-dark);
+      margin: 0 0 0.35rem 0;
+      font-weight: 400;
+    }
+    .story-pillar-item p {
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Refined Hotel Cards Hover */
+    .hotel-card {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px -8px rgba(15, 28, 22, 0.08);
+    }
+    .hotel-card.filtered-out {
+      display: none;
+    }
+
+    /* Luxury Lightbox / Room Gallery Modal */
+    .residence-drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 28, 22, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: none;
+      justify-content: flex-end;
+    }
+    .residence-drawer-backdrop.active {
+      display: flex;
+    }
+    .residence-drawer {
+      background: var(--bg-surface);
+      width: min(620px, 100vw);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 3rem 2.5rem;
+      box-shadow: -15px 0 45px rgba(0, 0, 0, 0.25);
+      animation: drawerSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @keyframes drawerSlide {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+    .drawer-close {
+      position: absolute;
+      top: 1.75rem;
+      right: 1.75rem;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-light);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      color: var(--text-main);
+      font-size: 1.25rem;
+      transition: background 0.2s;
+    }
+    .drawer-close:hover {
+      background: #eeebe1;
+    }
+    .drawer-media {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .drawer-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .drawer-amenity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .drawer-amenity-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .drawer-amenity-item svg {
+      color: var(--gold-champagne);
+      flex-shrink: 0;
+    }
+
+    /* Bespoke Inquiry Drawer Form */
+    .drawer-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .drawer-field label {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-subtle);
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    .drawer-field input, .drawer-field select, .drawer-field textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--bg-cream);
+      color: var(--text-main);
+    }
+    .drawer-field input:focus, .drawer-field select:focus {
+      outline: none;
+      border-color: var(--gold-champagne);
+      box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.15);
+    }
+
+    /* Minimalist Toast */
+    .toast-notice {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--emerald-dark);
+      color: #f7f5f0;
+      border: 1px solid var(--border-gold);
+      padding: 0.85rem 1.75rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      z-index: 10001;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .toast-notice.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Discreet VIP Concierge Pill */
+    .vip-concierge-pill {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--emerald-dark);
+      color: #ffffff;
+      border: 1px solid var(--border-gold);
+      padding: 0.75rem 1.35rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+      z-index: 999;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .vip-concierge-pill:hover {
+      background: var(--emerald-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+    }
+    .concierge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold-champagne);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Quiet Luxury Top Curation Bar -->
+  <aside class="top-curation-bar">
+    <span>Private Sanctuary Collection · <strong>Makkah & Madinah</strong></span>
+    <div class="curation-meta-links">
+      <a href="#philosophy">The Philosophy</a>
+      <a href="#residences">Residences</a>
+      <a href="#" class="open-drawer-btn" data-intent="General Concierge">Private Concierge</a>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container-shell nav-wrap">
+      <a aria-label="Sukoon Stays home" class="brand active" href="#" data-status="active">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy">
+          <strong>Sukoon</strong>
+          <small>Sacred stays · سكون</small>
+        </span>
+      </a>
+      
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#destinations">Destinations</a>
+        <a href="#residences">Residences</a>
+        <a href="#philosophy">Stillness</a>
+        <a href="#privilege">Privileges</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button type="button" class="nav-book open-drawer-btn" data-intent="Bespoke Booking">Reserve a Stay</button>
+        <button type="button" class="icon-button mobile-trigger" aria-label="Open menu" id="mobileMenuOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <span class="brand">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy">
+          <strong>Sukoon</strong>
+          <small>Sacred stays · سكون</small>
+        </span>
+      </span>
+      <button type="button" class="drawer-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#destinations" class="mobile-nav-link">Destinations</a>
+      <a href="#residences" class="mobile-nav-link">Residences</a>
+      <a href="#philosophy" class="mobile-nav-link">The Philosophy</a>
+      <a href="#privilege" class="mobile-nav-link">Seasonal Privileges</a>
+      <a href="#" class="mobile-nav-link open-drawer-btn" data-intent="General Concierge">Private Concierge</a>
+    </nav>
+    <div style="margin-top: auto; padding-top: 2rem;">
+      <button type="button" class="primary-button open-drawer-btn" data-intent="Bespoke Booking" style="width: 100%; justify-content: center; padding: 1rem;">
+        Reserve a Stay
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Cinematic Hero -->
+    <section class="hero">
+      <div class="hero-media">
+        <img src="./assets/makkah-hero.jpg" alt="Masjid al-Haram viewed from a peaceful hotel terrace" width="1920" height="1088">
+      </div>
+      
+      <div class="container-shell hero-content">
+        <div class="hero-copy">
+          <p class="hero-kicker">Makkah · Madinah · Kingdom of Saudi Arabia</p>
+          <h1>Stay Close to What Matters Most</h1>
+          <p>Carefully selected residences moments from the Holy Mosques. Designed for stillness, contemplation, and effortless devotion.</p>
+        </div>
+        
+        <form class="search-panel" id="heroSearchForm">
+          <label class="search-field">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>
+              <small>Sanctuary City</small>
+              <select id="searchCity">
+                <option value="all">All Holy Stays</option>
+                <option value="Makkah" selected>Makkah (Masjid al-Haram)</option>
+                <option value="Madinah">Madinah (Al-Masjid an-Nabawi)</option>
+              </select>
+            </span>
+          </label>
+          
+          <label class="search-field">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path>
+              <path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path>
+            </svg>
+            <span>
+              <small>Arrival</small>
+              <input type="date" aria-label="Arrival date" id="checkInDate">
+            </span>
+          </label>
+          
+          <label class="search-field">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path>
+              <path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path>
+            </svg>
+            <span>
+              <small>Departure</small>
+              <input type="date" aria-label="Departure date" id="checkOutDate">
+            </span>
+          </label>
+          
+          <label class="search-field">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg>
+            <span>
+              <small>Guests</small>
+              <select aria-label="Guests" id="searchGuests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests (Family)</option>
+                <option value="5+">5+ Guests (Executive)</option>
+              </select>
+            </span>
+          </label>
+          
+          <button class="search-submit" type="submit" aria-label="Search residences">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21 21-4.34-4.34"></path>
+              <circle cx="11" cy="11" r="8"></circle>
+            </svg>
+            <span>Search</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sacred Destinations Duet -->
+    <section class="section" id="destinations">
+      <div class="container-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Sacred destinations</p>
+            <h2>Two cities, one meaningful journey</h2>
+            <p class="section-intro">Selected properties within walking distance of the sanctified courtyards.</p>
+          </div>
+        </div>
+        
+        <div class="destination-grid">
+          <a href="#residences" class="destination-card city-quick-link" data-city="Makkah">
+            <img src="./assets/makkah-destination.jpg" alt="Masjid al-Haram in Makkah" width="1408" height="1200" loading="lazy">
+            <div class="destination-copy">
+              <p>Masjid al-Haram</p>
+              <h3>Makkah Al-Mukarramah</h3>
+              <div class="destination-meta">
+                <span>18 Curated Stays</span>
+                <span>Explore <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="#residences" class="destination-card city-quick-link" data-city="Madinah">
+            <img src="./assets/madinah-destination.jpg" alt="Al-Masjid an-Nabawi in Madinah" width="1408" height="1200" loading="lazy">
+            <div class="destination-copy">
+              <p>Al-Masjid an-Nabawi</p>
+              <h3>Al-Madinah Al-Munawwarah</h3>
+              <div class="destination-meta">
+                <span>14 Curated Stays</span>
+                <span>Explore <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Collection / The Residences -->
+    <section class="section section-muted" id="residences">
+      <div class="container-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The Curated Collection</p>
+            <h2 id="collectionHeading">Featured Sacred Stays</h2>
+            <p class="section-intro">Quiet architectural sanctuaries chosen for verified proximity and pure stillness.</p>
+          </div>
+        </div>
+
+        <!-- Quiet Luxury Horizontal Filter Tabs -->
+        <div class="editorial-filter-bar">
+          <button type="button" class="editorial-filter-link active" data-filter="all">All Residences</button>
+          <button type="button" class="editorial-filter-link" data-filter="Makkah">Makkah Sanctuaries</button>
+          <button type="button" class="editorial-filter-link" data-filter="Madinah">Madinah Retreats</button>
+          <button type="button" class="editorial-filter-link" data-filter="kaaba">Guaranteed Kaaba View</button>
+          <button type="button" class="editorial-filter-link" data-filter="family">Family Residences</button>
+        </div>
+        
+        <div class="hotel-grid" id="hotelsContainer">
+          <!-- Residence 1 -->
+          <article class="hotel-card" data-city="Makkah" data-tags="kaaba family">
+            <div class="hotel-image-wrap">
+              <img src="./assets/makkah-destination.jpg" alt="Safa Grand Residences luxury room" width="1408" height="1200" loading="lazy">
+              <span class="hotel-badge">Guest Favourite · Kaaba View</span>
+            </div>
+            <div class="hotel-body">
+              <div class="hotel-topline">
+                <span>Makkah</span>
+                <div class="rating">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    9.4
+                  </span>
+                  <small>1,284 reviews</small>
+                </div>
+              </div>
+              <h3>Safa Grand Residences</h3>
+              <p class="hotel-distance">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                280 m from Masjid al-Haram
+              </p>
+              <p class="hotel-description">Serene rooms, private contemplation terraces, and exceptional Haram views in the heart of Makkah.</p>
+              <ul class="facility-list">
+                <li>Kaaba terrace view</li>
+                <li>Gourmet breakfast</li>
+                <li>Family connecting suites</li>
+              </ul>
+              <div class="hotel-footer">
+                <p>
+                  <small>From / night</small>
+                  <strong>SAR 890</strong>
+                  <span> incl. taxes</span>
+                </p>
+                <button type="button" class="text-link open-suite-drawer" 
+                  data-name="Safa Grand Residences" 
+                  data-city="Makkah" 
+                  data-distance="280m from Masjid al-Haram (Gate 1)" 
+                  data-price="SAR 890" 
+                  data-img="./assets/makkah-destination.jpg"
+                  data-desc="Perched on the prime perimeter of the Grand Mosque, Safa Grand Residences blends warm Arabian cedar interiors with floor-to-ceiling glass framing the Holy Kaaba.">
+                  View Residence <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Residence 2 -->
+          <article class="hotel-card" data-city="Madinah" data-tags="">
+            <div class="hotel-image-wrap">
+              <img src="./assets/madinah-destination.jpg" alt="Rawda Emerald Hotel luxury room" width="1408" height="1200" loading="lazy">
+              <span class="hotel-badge">Exceptional Location</span>
+            </div>
+            <div class="hotel-body">
+              <div class="hotel-topline">
+                <span>Madinah</span>
+                <div class="rating">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    9.2
+                  </span>
+                  <small>968 reviews</small>
+                </div>
+              </div>
+              <h3>Rawda Emerald Hotel</h3>
+              <p class="hotel-distance">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                350 m from Al-Masjid an-Nabawi
+              </p>
+              <p class="hotel-description">Contemporary comfort and gracious hospitality moments from the Prophet’s Mosque shaded plaza.</p>
+              <ul class="facility-list">
+                <li>Mosque courtyard view</li>
+                <li>Artisan restaurant</li>
+                <li>Barrier-free accessibility</li>
+              </ul>
+              <div class="hotel-footer">
+                <p>
+                  <small>From / night</small>
+                  <strong>SAR 720</strong>
+                  <span> incl. taxes</span>
+                </p>
+                <button type="button" class="text-link open-suite-drawer" 
+                  data-name="Rawda Emerald Hotel" 
+                  data-city="Madinah" 
+                  data-distance="350m from Al-Masjid an-Nabawi (Gate 25)" 
+                  data-price="SAR 720" 
+                  data-img="./assets/madinah-destination.jpg"
+                  data-desc="Located directly facing the northern marble promenade of the Prophet's Mosque, Rawda Emerald offers an aura of calm, understated luxury with direct proximity to Rawdah Sharif.">
+                  View Residence <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Residence 3 -->
+          <article class="hotel-card" data-city="Makkah" data-tags="family">
+            <div class="hotel-image-wrap">
+              <img src="./assets/hotel-suite.jpg" alt="Jabal Noor Suites luxury room" width="1408" height="1200" loading="lazy">
+              <span class="hotel-badge">Family Sanctuary</span>
+            </div>
+            <div class="hotel-body">
+              <div class="hotel-topline">
+                <span>Makkah</span>
+                <div class="rating">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    8.9
+                  </span>
+                  <small>742 reviews</small>
+                </div>
+              </div>
+              <h3>Jabal Noor Suites</h3>
+              <p class="hotel-distance">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                650 m from Masjid al-Haram
+              </p>
+              <p class="hotel-description">Spacious residential suites crafted for families, offering calm stone interiors and private 24/7 golf transfers.</p>
+              <ul class="facility-list">
+                <li>Multi-room suites</li>
+                <li>Private golf transfer</li>
+                <li>24h Dedicated concierge</li>
+              </ul>
+              <div class="hotel-footer">
+                <p>
+                  <small>From / night</small>
+                  <strong>SAR 640</strong>
+                  <span> incl. taxes</span>
+                </p>
+                <button type="button" class="text-link open-suite-drawer" 
+                  data-name="Jabal Noor Suites" 
+                  data-city="Makkah" 
+                  data-distance="650m (2-minute private cart transfer)" 
+                  data-price="SAR 640" 
+                  data-img="./assets/hotel-suite.jpg"
+                  data-desc="Crafted for multi-generational families seeking solace and ample room. Features quiet living salons, private dining spaces, and around-the-clock chauffeur shuttles to the outer gates.">
+                  View Residence <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW EDITORIAL STORYTELLING SECTION: "Designed for Stillness" (Aman / Quiet Luxury Style) -->
+    <section class="editorial-story-section" id="philosophy">
+      <div class="container-shell">
+        <div class="story-grid">
+          <div class="story-image-wrap">
+            <img src="./assets/hotel-suite.jpg" alt="Peaceful luxury suite overlooking holy minarets" width="1408" height="1056" loading="lazy">
+          </div>
+          <div class="story-content">
+            <p class="story-kicker">The Sukoon Philosophy</p>
+            <h2 class="story-title">Designed for Stillness, Handpicked for Devotion</h2>
+            <p class="story-text">
+              A journey to the Holy Mosques is among the most profound spiritual chapters of a lifetime. Yet the friction of crowded lobbies, lengthy commutes, and noisy streets often interrupts the inner calm pilgrims travel so far to seek.
+            </p>
+            <p class="story-text">
+              Sukoon curates only those rare residences where distance dissolves. Each room is selected to ensure that when you step outside, you are already upon sacred ground; and when you retreat inside, tranquility envelopes your senses.
+            </p>
+            <div class="story-pillars">
+              <div class="story-pillar-item">
+                <h4>01 / Proximity</h4>
+                <p>Measured in direct footsteps to the outer gates, avoiding shuttle wait times.</p>
+              </div>
+              <div class="story-pillar-item">
+                <h4>02 / Serenity</h4>
+                <p>Acoustic insulation, neutral palettes, and contemplation spaces.</p>
+              </div>
+              <div class="story-pillar-item">
+                <h4>03 / Intuition</h4>
+                <p>Silent, graceful service attentive to prayer schedules and dining needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Sukoon Standards -->
+    <section class="section section-dark">
+      <div class="container-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The Sukoon Standard</p>
+            <h2>Considered Hospitality</h2>
+            <p class="section-intro">Clarity and care at every step of your sacred journey.</p>
+          </div>
+        </div>
+        
+        <div class="why-grid">
+          <article class="why-item">
+            <span class="icon-tile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"></path><circle cx="12" cy="8" r="2"></circle><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"></path></svg>
+            </span>
+            <h3>Location First</h3>
+            <p>Every residence is selected strictly with uncompromised access to the Holy Mosques in mind.</p>
+          </article>
+          
+          <article class="why-item">
+            <span class="icon-tile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </span>
+            <h3>Curated Quality</h3>
+            <p>A selective, boutique portfolio rather than an overwhelming and unvetted catalogue.</p>
+          </article>
+          
+          <article class="why-item">
+            <span class="icon-tile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </span>
+            <h3>Guaranteed Views</h3>
+            <p>Transparent room view allocations with contractual verification on every booking.</p>
+          </article>
+          
+          <article class="why-item">
+            <span class="icon-tile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+            </span>
+            <h3>Private Concierge</h3>
+            <p>Discreet, dedicated assistance before, during, and following your sacred pilgrimage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal Privilege Banner -->
+    <section class="section" id="privilege">
+      <div class="container-shell">
+        <div class="offer-band">
+          <div class="offer-image">
+            <img src="./assets/hotel-suite.jpg" alt="Luxury suite overlooking holy minarets" width="1600" height="1104" loading="lazy">
+          </div>
+          <div class="offer-copy">
+            <p class="eyebrow">Seasonal Privilege</p>
+            <h2>Stay Longer, Journey Slower</h2>
+            <p>Enjoy a complimentary fourth evening on selected stays in Makkah and Madinah, accompanied by private intercity transfers and morning dining.</p>
+            <button type="button" class="primary-button open-drawer-btn" data-intent="Seasonal Privilege Inquiry">
+              Inquire With Concierge 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container-shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a aria-label="Sukoon Stays home" class="brand active" href="#">
+            <span class="brand-mark">S</span>
+            <span class="brand-copy">
+              <strong>Sukoon</strong>
+              <small>Sacred stays · سكون</small>
+            </span>
+          </a>
+          <p>Considered hotel stays near the Holy Mosques in Makkah and Madinah, selected for comfort, location, and peace of mind.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Destinations</h3>
+          <a href="#destinations" class="city-quick-link" data-city="Makkah">Makkah Residences</a>
+          <a href="#destinations" class="city-quick-link" data-city="Madinah">Madinah Residences</a>
+          <a href="#" class="open-drawer-btn" data-intent="Bespoke Pilgrimage Plan">Plan Your Stay</a>
+        </div>
+        
+        <div class="footer-column">
+          <h3>The House</h3>
+          <a href="#philosophy">Our Philosophy</a>
+          <a href="#privilege">Seasonal Privileges</a>
+          <a href="#" class="open-drawer-btn" data-intent="Private Concierge">Private Concierge</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>&copy; 2026 Sukoon Sacred Stays. All rights reserved.</span>
+        <span>Curated collection near Masjid al-Haram & Al-Masjid an-Nabawi.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Discreet Floating VIP Concierge Link -->
+  <a href="#" class="vip-concierge-pill open-drawer-btn" data-intent="WhatsApp Private Concierge">
+    <span class="concierge-dot"></span>
+    <span>Private Concierge</span>
+  </a>
+
+  <!-- LUXURY EDITORIAL SUITE & INQUIRY DRAWER -->
+  <div class="residence-drawer-backdrop" id="residenceDrawer">
+    <div class="residence-drawer">
+      <button type="button" class="drawer-close" id="drawerCloseBtn" aria-label="Close details">&times;</button>
+      
+      <div class="drawer-media">
+        <img src="./assets/makkah-destination.jpg" id="drawerImage" alt="Residence view">
+      </div>
+
+      <div>
+        <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-champagne); font-weight: 600;" id="drawerCity">Makkah Al-Mukarramah</span>
+        <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--emerald-dark); margin: 0.4rem 0 0.2rem;" id="drawerTitle">Safa Grand Residences</h2>
+        <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;" id="drawerDistance">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          280 m from Masjid al-Haram (Gate 1)
+        </p>
+      </div>
+
+      <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin: 0;" id="drawerDesc">
+        Perched on the prime perimeter of the Grand Mosque, Safa Grand Residences blends warm Arabian cedar interiors with floor-to-ceiling glass framing the Holy Kaaba.
+      </p>
+
+      <div class="drawer-amenity-grid">
+        <div class="drawer-amenity-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          <span>Direct Flat Walkway</span>
+        </div>
+        <div class="drawer-amenity-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M20 12v8H4v-8"></path><path d="m4 12 8-8 8 8"></path></svg>
+          <span>Haram Audio Broadcast</span>
+        </div>
+        <div class="drawer-amenity-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+          <span>Private Butler Service</span>
+        </div>
+        <div class="drawer-amenity-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path></svg>
+          <span>Flexible Check-in</span>
+        </div>
+      </div>
+
+      <!-- Bespoke Reservation Form -->
+      <form class="drawer-form" id="drawerReservationForm">
+        <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--emerald-dark); margin: 0.5rem 0 0;">Reserve or Inquire</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div class="drawer-field">
+            <label for="formCheckIn">Arrival Date</label>
+            <input type="date" id="formCheckIn" required>
+          </div>
+          <div class="drawer-field">
+            <label for="formCheckOut">Departure Date</label>
+            <input type="date" id="formCheckOut" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div class="drawer-field">
+            <label for="formGuests">Guests</label>
+            <select id="formGuests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests (Family)</option>
+              <option value="5+">5+ (Executive Suite)</option>
+            </select>
+          </div>
+          <div class="drawer-field">
+            <label for="formView">Perspective</label>
+            <select id="formView">
+              <option value="Kaaba View">Direct Kaaba View</option>
+              <option value="Courtyard View">Mosque Courtyard</option>
+              <option value="Connecting Suite">Family Suite</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="drawer-field">
+          <label for="formName">Full Name</label>
+          <input type="text" id="formName" placeholder="e.g. Tariq Al-Mansoor" required>
+        </div>
+
+        <div class="drawer-field">
+          <label for="formContact">WhatsApp / Phone</label>
+          <input type="tel" id="formContact" placeholder="+966 50 000 0000" required>
+        </div>
+
+        <button type="submit" class="primary-button" style="width: 100%; justify-content: center; padding: 1rem; margin-top: 0.5rem; font-size: 0.95rem;">
+          Send Private Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div class="toast-notice" id="toastNotice">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-champagne);"><path d="M20 6 9 17l-5-5"></path></svg>
+    <span id="toastMsg">Inquiry sent to Concierge.</span>
+  </div>
+
+  <!-- Quiet Luxury Script Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. Initial Dates Setup
+      const now = new Date();
+      const inD = new Date(); inD.setDate(now.getDate() + 7);
+      const outD = new Date(); outD.setDate(now.getDate() + 11);
+      const toISO = d => d.toISOString().split('T')[0];
+
+      const inInput = document.getElementById('checkInDate');
+      const outInput = document.getElementById('checkOutDate');
+      const formIn = document.getElementById('formCheckIn');
+      const formOut = document.getElementById('formCheckOut');
+
+      if (inInput) inInput.value = toISO(inD);
+      if (outInput) outInput.value = toISO(outD);
+      if (formIn) formIn.value = toISO(inD);
+      if (formOut) formOut.value = toISO(outD);
+
+      // 2. Editorial Filter Tabs
+      const filterLinks = document.querySelectorAll('.editorial-filter-link');
+      const hotelCards = document.querySelectorAll('.hotel-card');
+
+      filterLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          filterLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.getAttribute('data-filter');
+
+          hotelCards.forEach(card => {
+            const city = card.getAttribute('data-city');
+            const tags = card.getAttribute('data-tags') || '';
+            
+            if (filter === 'all') {
+              card.classList.remove('filtered-out');
+            } else if (filter === 'Makkah' || filter === 'Madinah') {
+              card.classList.toggle('filtered-out', city !== filter);
+            } else if (tags.includes(filter)) {
+              card.classList.remove('filtered-out');
+            } else {
+              card.classList.add('filtered-out');
+            }
+          });
+        });
+      });
+
+      // Quick destination link filter
+      document.querySelectorAll('.city-quick-link').forEach(el => {
+        el.addEventListener('click', function () {
+          const city = this.getAttribute('data-city');
+          const matchingTab = document.querySelector(`.editorial-filter-link[data-filter="${city}"]`);
+          if (matchingTab) matchingTab.click();
+        });
+      });
+
+      // Hero search form submit
+      const heroForm = document.getElementById('heroSearchForm');
+      if (heroForm) {
+        heroForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const city = document.getElementById('searchCity').value;
+          const matchingTab = document.querySelector(`.editorial-filter-link[data-filter="${city}"]`);
+          if (matchingTab) matchingTab.click();
+          const residences = document.getElementById('residences');
+          if (residences) residences.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // 3. Luxury Residence Drawer Logic
+      const drawer = document.getElementById('residenceDrawer');
+      const drawerClose = document.getElementById('drawerCloseBtn');
+      const toast = document.getElementById('toastNotice');
+      const toastMsg = document.getElementById('toastMsg');
+
+      function showToast(msg) {
+        if (toast && toastMsg) {
+          toastMsg.textContent = msg;
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 3500);
+        }
+      }
+
+      function openDrawerWithData(data) {
+        if (data.name) document.getElementById('drawerTitle').textContent = data.name;
+        if (data.city) document.getElementById('drawerCity').textContent = data.city + ' Al-Mukarramah';
+        if (data.distance) document.getElementById('drawerDistance').innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          ${data.distance}`;
+        if (data.desc) document.getElementById('drawerDesc').textContent = data.desc;
+        if (data.img) document.getElementById('drawerImage').src = data.img;
+
+        drawer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+      if (drawer) {
+        drawer.addEventListener('click', (e) => {
+          if (e.target === drawer) closeDrawer();
+        });
+      }
+
+      document.querySelectorAll('.open-suite-drawer').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openDrawerWithData({
+            name: this.getAttribute('data-name'),
+            city: this.getAttribute('data-city'),
+            distance: this.getAttribute('data-distance'),
+            desc: this.getAttribute('data-desc'),
+            img: this.getAttribute('data-img')
+          });
+        });
+      });
+
+      document.querySelectorAll('.open-drawer-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const intent = this.getAttribute('data-intent') || 'Bespoke Inquiry';
+          openDrawerWithData({
+            name: 'Bespoke Sanctuary Curation',
+            city: 'Makkah & Madinah',
+            distance: 'Custom Private Allocation',
+            desc: 'Inform our private concierge of your family’s dates, mobility requirements, and preferred perspective of the Holy Sanctuaries.',
+            img: './assets/makkah-hero.jpg'
+          });
+        });
+      });
+
+      // 4. Reservation Submission
+      const form = document.getElementById('drawerReservationForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('formName').value;
+          closeDrawer();
+          showToast(`Barakallahu feekum, ${name}. Your private concierge will confirm within 2 hours.`);
+          form.reset();
+        });
+      }
+
+      // 5. Mobile Navigation Drawer Listeners
+      const mobileOpen = document.getElementById('mobileMenuOpen');
+      const mobileClose = document.getElementById('mobileMenuClose');
+      const mobileNavDrawer = document.getElementById('mobileDrawer');
+      const mobileNavOverlay = document.getElementById('mobileOverlay');
+
+      function toggleMobile(open) {
+        if (mobileNavDrawer && mobileNavOverlay) {
+          mobileNavDrawer.classList.toggle('open', open);
+          mobileNavOverlay.classList.toggle('open', open);
+          document.body.style.overflow = open ? 'hidden' : '';
+        }
+      }
+
+      if (mobileOpen) mobileOpen.addEventListener('click', () => toggleMobile(true));
+      if (mobileClose) mobileClose.addEventListener('click', () => toggleMobile(false));
+      if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', () => toggleMobile(false));
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => toggleMobile(false));
+      });
+    });
+  </script>
+</body>
+</html>
